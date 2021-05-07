@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  opennetadmin:
+    image: raabf/ona:v18.1.1
+    container_name: ona-app
+    ports:
+      - '127.0.0.1:8667:80'
+    volumes:
+      #- type: volume
+      #  source: onaconfig
+      #  target: /opt/ona/www/local/config
+      #  read_only: false
+      - type: bind
+        source: /etc/timezone
+        target: /etc/timezone
+        read_only: true
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+  mariadb:
+    image: mariadb:10.5
+    container_name: ona-db
+    ports:
+      - '127.0.0.1:3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 58z5J94GBcM8Hx
+
+#volumes:
+#  onaconfig:
