@@ -2,6 +2,8 @@
 
 > OpenNetAdmin 8.5.14 <= 18.1.1 - Remote Command Execution
 
+[[PacketStorm](https://packetstormsecurity.com/files/162516/OpenNetAdmin-18.1.1-Remote-Command-Execution.html)] - [[WLB-2021050034](https://cxsecurity.com/issue/WLB-2021050034)]
+
 ## Usage
 
 ```
